@@ -10,12 +10,14 @@
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
-#toplinks a {
+.linklist a {
+    font-size: 11px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     color: #000099;
     border-bottom: 1px dotted #000099;
 }
 
-#toplinks a:hover {
+.linklist a:hover {
     color: #000099;
     border-bottom: none;
 }
@@ -25,4 +27,39 @@
     height: 19px;
     font-size: 11px;
     width: 390px;
+}
+
+.check {
+    font-size: 11px;
+    margin-right: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.check input {
+    margin-right: 3px;
+}
+#check {
+    margin-top: 5px;
+    text-align: center;
+}
+#buttons {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#how {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#bottomlinks {
+    margin-top: 25px;
+    text-align: center;
+    
+}
+
+#porno {
+    margin-top: 25px;
+    text-align: center;
 }

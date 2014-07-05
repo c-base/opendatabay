@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="root">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>Lade Dramen, Operetten, Lustspiele, Belletristik! 
+      Open Data Bay - Die kulturell anspruchsvollste BitTorrent-Seite der Galaxie</title>
 
     <!-- Bootstrap -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,9 +18,14 @@
     <![endif]-->
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-    <div class="container">
-      
+  <body><div ng-controller="index">         
+    <div id="porno" class="container" ng-if="model.showPorno">
+      <img src="images/porno.jpg" />
+      <h2>Lars Edinger, Charakterdarsteller</h2>
+      <a href="#" ng-click="hidePorno()">Zurück</a>
+    </div><!-- /.container -->
+    
+    <div class="container" ng-if="!model.showPorno">
       <div class="row">
         <div class="col-xs-12">
           <div id="logo">
@@ -30,7 +36,7 @@
       
       <div class="row">
         <div class="col-xs-12">
-          <div id="toplinks">
+          <div id="toplinks" class="linklist">
              <strong>Torrents suchen</strong> |
              <a href="#">Torrent-Verzeichnis blättern</a> | 
              <a href="#">Frische Torrents</a> | 
@@ -44,19 +50,81 @@
       <div class="row">
         <div class="col-xs-12">
           <div id="logo">
-            <input name="q" id="search" type="search" title="OpenData-Suche" placeholder="OpenData-Suche" autofocus="" required="" />
+            <input name="q" id="search" type="search" title="OpenData-Suche" placeholder="OpenData-Suche" autofocus="" />
           </div>
         </div><!-- /.col -->
       </div><!-- /.row -->
       
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="check">
+            <span class="check"><input type="checkbox" ng-model="model.isAll" ng-click="clickAll()"/>Alle</span>
+            <span class="check"><input type="checkbox" ng-model="model.isOpera" ng-click="clickAny()"     />Opern</span>
+            <span class="check"><input type="checkbox" ng-model="model.isOperette" ng-click="clickAny()"  />Operetten</span>
+            <span class="check"><input type="checkbox" ng-model="model.isDrama" ng-click="clickAny()"    />Dramen</span>
+            <span class="check"><input type="checkbox" ng-model="model.isFiction" ng-click="clickAny()"  />Belletristik</span>
+            <span class="check"><input type="checkbox" ng-model="model.isPorno" ng-click="clickAny()"    />Porno</span>
+            <span class="check"><input type="checkbox" ng-model="model.isStuff" ng-click="clickAny()"    />Sonstiges</span>
+          </div>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
       
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="buttons">
+            <input type="submit" value="OpenData-Suche" ng-click="doSearch()"/>
+            <input type="submit" value="Kulturschock" ng-click="doSearch()" />
+          </div>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
       
-    </div><!-- /.container -->
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="how">
+            <strong>Für die Bewegung. Zum herunterladen. Für Alle!</strong>
+          </div>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+      
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+          <div id="bottomlinks" class="linklist">
+            <a href="http://c-base.org/projects/c-atre">Einloggen</a> |
+            <a href="http://c-base.org/projects/c-atre">Registrieren</a> |           
+            <a href="http://c-base.org/projects/c-atre">Über uns</a> |
+            <a href="#">Empty threats</a> |
+            <a href="http://c-base.org/projects/c-atre">Blog</a> | 
+            
+            <a href="http://c-base.org/projects/c-atre">Kontaktiere uns</a>
+            <br />
+            <a href="#">Policy</a> | 
+            <a href="#">Downloads</a> | 
+            <a href="#">Porno-Promo</a> | 
+            <a href="#">Noodles</a> | 
+            <a href="#">Tag Cloud</a> | 
+            <a href="#">Forum</a> | 
+            <a href="#">OpenDataBrowser</a>
+            <br /> 
+            <a href="#">OpenDataFiles</a> | 
+            <a href="#">OpenDataImg</a> | 
+            <a href="#">PasteOpenData</a> | 
+            <a href="#">Proxy</a> | 
+            <a href="#">Follow ODB on Facebook</a>
+          </div>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+      
+    </div></div><!-- /.container -->
     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="js/controller.js"></script>
+    
+    
+    
   </body>
 </html>
