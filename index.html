@@ -19,11 +19,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body><div ng-controller="index">         
-    <div id="porno" class="container" ng-if="model.showPorno">
-      <img src="images/porno.jpg" />
-      <h2>Lars Edinger, Charakterdarsteller</h2>
-      <a href="#" ng-click="hidePorno()">Zurück</a>
-    </div><!-- /.container -->
+    
     
     <div class="container" ng-if="!model.showPorno">
       <div class="row">
@@ -114,8 +110,15 @@
         </div><!-- /.col -->
       </div><!-- /.row -->
       
-    </div></div><!-- /.container -->
+    </div><!-- /.container -->
     
+    <div id="porno" class="container" ng-if="model.showPorno">
+      <img src="images/porno.jpg" />
+      <h2>Lars Edinger, Charakterdarsteller</h2>
+      <a href="#" ng-click="hidePorno()">Zurück</a>
+    </div><!-- /.container -->
+    
+    </div><!-- /controller -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
