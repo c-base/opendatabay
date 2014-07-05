@@ -1,0 +1,28 @@
+#logo {
+    text-align: center;
+    margin-top: 25px;
+}
+
+#toplinks {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 11px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#toplinks a {
+    color: #000099;
+    border-bottom: 1px dotted #000099;
+}
+
+#toplinks a:hover {
+    color: #000099;
+    border-bottom: none;
+}
+
+#search {
+    font-family: 'Lucida Grande';
+    height: 19px;
+    font-size: 11px;
+    width: 390px;
+}
