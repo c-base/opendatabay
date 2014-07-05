@@ -25,7 +25,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div id="logo">
-            <img src="images/logo.png" width="275"/>
+            <a href="http://www.c-base.org/projects/c-atre/?page_id=9"><img src="images/logo.png" width="275"/></a>
           </div>
         </div><!-- /.col -->
       </div><!-- /.row -->
@@ -54,14 +54,15 @@
       <div class="row">
         <div class="col-xs-12">
           <div id="check">
-            <span class="check"><input type="checkbox" ng-model="model.isAll" ng-click="clickAll()"/>Alle</span>
-            <span class="check"><input type="checkbox" ng-model="model.isOpera" ng-click="clickAny()"     />Opern</span>
-            <span class="check"><input type="checkbox" ng-model="model.isOperette" ng-click="clickAny()"  />Operetten</span>
-            <span class="check"><input type="checkbox" ng-model="model.isDrama" ng-click="clickAny()"    />Dramen</span>
-            <span class="check"><input type="checkbox" ng-model="model.isFiction" ng-click="clickAny()"  />Belletristik</span>
-            <span class="check"><input type="checkbox" ng-model="model.isPorno" ng-click="clickAny()"    />Porno</span>
-            <span class="check"><input type="checkbox" ng-model="model.isStuff" ng-click="clickAny()"    />Sonstiges</span>
-          </div>
+            <span id="ch1" class="check"><input type="checkbox" ng-model="model.isAll" ng-click="clickAll()"/>Alle</span>
+            <span id="ch2" class="check"><input type="checkbox" ng-model="model.isOpera" ng-click="clickAny()"/>Opern</span></span>
+            <span id="ch3" class="check"><input type="checkbox" ng-model="model.isOperette" ng-click="clickAny()"/>Operetten</span>
+            <span id="ch4" class="check"><input type="checkbox" ng-model="model.isDrama" ng-click="clickAny()"/>Dramen</span>
+            <span id="ch5" class="check"><input type="checkbox" ng-model="model.isFiction" ng-click="clickAny()"/>Belletristik</span>
+            <span id="ch6" class="check"><input type="checkbox" ng-model="model.isPorno" ng-click="clickAny()"/>Porno</span>
+            <span id="ch7" class="check"><input type="checkbox" ng-model="model.isStuff" ng-click="clickAny()"/>Sonstiges</span>            
+          </div>                 
+          
         </div><!-- /.col -->
       </div><!-- /.row -->
       
@@ -85,6 +86,12 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
           <div id="bottomlinks" class="linklist">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://opendatabay.org/" data-text="Für die Bewegung. Zum Runterladen. Für Alle! Mit @c__atre." data-hashtags="cbase">Tweet</a>
+            		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                  <br />
+            <iframe style="width: 100px; height: 50px;" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcollectivdrama&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+          
+            <br />
             <a href="http://c-base.org/projects/c-atre">Einloggen</a> |
             <a href="http://c-base.org/projects/c-atre">Registrieren</a> |           
             <a href="http://c-base.org/projects/c-atre">Über uns</a> |
@@ -105,7 +112,7 @@
             <a href="#">OpenDataImg</a> | 
             <a href="#">PasteOpenData</a> | 
             <a href="#">Proxy</a> | 
-            <a href="#">Follow ODB on Facebook</a>
+            <a href="https://www.facebook.com/collectivdrama">Follow ODB on Facebook</a>
           </div>
         </div><!-- /.col -->
       </div><!-- /.row -->
@@ -126,7 +133,7 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="js/controller.js"></script>
-    
+    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     
     
   </body>
